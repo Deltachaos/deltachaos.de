@@ -1,0 +1,56 @@
+.box {
+	width: 650px;
+	margin: auto;
+	margin-top: 15px;
+	position: relative;
+}
+
+.box h2 {
+	margin-top: 0;
+}
+
+.box h2 span:before {
+	content: open-quote;
+}
+
+.box h2 span:after {
+	content: close-quote;
+}
+
+.info {
+	display: inline-block;
+	vertical-align: top;
+	margin-top:0;
+	margin-bottom:0;
+	padding-left:15px;
+}
+
+ul {
+	list-style:none;
+}
+
+.social {
+	padding-left:0;
+	margin-bottom:0;
+}
+
+.social li {
+	margin-left: 5px;
+	display: inline;
+}
+
+.details {
+	border: 1px solid #e8e8e8;
+	padding: 15px;
+	margin-bottom: 15px;
+	border-radius: 5px;
+}
+
+.twitter {
+	margin-bottom: 12px;
+}
+
+.twitter iframe {
+	width: 100%;
+}
+
