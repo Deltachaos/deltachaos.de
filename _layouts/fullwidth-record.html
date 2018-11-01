@@ -1,0 +1,43 @@
+---
+layout: plain
+---
+{% if site.data.collection %}
+<style type="text/css">
+    {% for release in site.data.collection %}
+    {% if release.cover_image %}
+    .discogs-release-{{ release.id }}:before {
+         background-image: url('{{ release.cover_image }}');
+     }
+    {% endif %}
+    {% endfor %}
+</style>
+{%- endif -%}
+
+<div class="wrapper">
+<div class="content">
+{%- if page.title -%}
+<h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+
+{{ content }}
+</div>
+</div>
+
+{% if site.data.collection %}
+<div class="wrapper full-width-record">
+  <div id="catalog">
+      <ul>
+          {% for release in site.data.collection %}
+          <li data-discogs-id="{{ release.id }}">
+              <a class="cover-tile discogs-release-{{ release.id }}" target="_blank" href="https://www.discogs.com/release/{{ release.id }}">
+                  <div>
+                      <span>{{ release.artist}}</span>
+                      <span class="dash">-</span>
+                      <span>{{ release.title }}</span>
+                  </div>
+              </a></li>
+          {% endfor %}
+      </ul>
+  </div>
+</div>
+{%- endif -%}

@@ -1,0 +1,65 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+default_locale: "de"
+title: δελταχαος
+author: Maximilian Ruta
+email: mr@deltachaos.de
+gnupg_title: '0xE2093512D5F67BBA'
+description: >-
+  Web Entwickler aus Leidenschaft, politisch engagiert,
+  Radiohörer, Vegetarier.
+  Ich schreibe hier über alles was mich bewegt, das
+  aktuelle politische Geschehen, Nerdkarms, und Musik.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.deltachaos.de/" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Deltachaos
+github_username:  Deltachaos
+facebook_username: maximilian.ruta
+instagram_username: deltachaosrec
+linkedin_username: maximilian-ruta-72b5b05a
+linkedin_displayname: maximilian-ruta
+lastfm_username: deltachaosrec
+xing_username: Maximilian_Ruta
+stackexchange_username: 895133/maximilian-ruta
+stackexchange_displayname: maximilian-ruta
+youtube_username: deltachaosrec
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+minima:
+  date_format: "%-d %B %Y"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - .sass-cache
+  - .bundle
+  - .idea
+  - .travis.yml
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - composer.json
+  - composer.lock
+  - bin
+  - commands
+  - node_modules
+  - vendor
