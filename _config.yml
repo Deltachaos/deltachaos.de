@@ -55,6 +55,7 @@ exclude:
   - .idea
   - .travis.yml
   - README.md
+  - LICENSE
   - Gemfile
   - Gemfile.lock
   - composer.json
