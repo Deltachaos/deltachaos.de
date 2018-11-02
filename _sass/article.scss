@@ -196,7 +196,7 @@ article.post .post-content {
     opacity: 1;
     transition-property: filter, transform, opacity;
     transition-timing-function: cubic-bezier(0.050, 0.930, 0.290, 0.870);
-    transition-duration: 25000ms;
+    transition-duration: 15000ms;
   }
 
   &:hover a:before {
