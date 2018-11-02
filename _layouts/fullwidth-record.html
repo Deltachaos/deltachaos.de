@@ -60,6 +60,9 @@ layout: plain
             elm.className = 'cover-tile fadeout';
             setTimeout(function() {
               elm.className = 'cover-tile loaded';
+              setTimeout(function() {
+                elm.className = 'cover-tile loading-complete';
+              }, 500);
             }, 400);
           } else {
             clearTimeout(loadingStarted);
