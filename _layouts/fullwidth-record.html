@@ -49,13 +49,24 @@ layout: plain
 
     images.forEach(function(a) {
       var elm = document.getElementById('discogs-release-' + a.id);
-      elm.className = 'cover-tile loading';
+      elm.className = 'cover-tile before-loading';
+      var loadingStarted = setTimeout(function() {
+        loadingStarted = true;
+        elm.className = 'cover-tile loading';
 
-      var bgImg = new Image();
-      bgImg.onload = function(){
-        elm.className = 'cover-tile';
-      };
-      bgImg.src = a.cover_image;
+        var bgImg = new Image();
+        bgImg.onload = function(){
+          if (loadingStarted === true) {
+            elm.className = 'cover-tile fadeout';
+            setTimeout(function() {
+              elm.className = 'cover-tile loaded';
+            }, 400);
+          } else {
+            clearTimeout(loadingStarted);
+          }
+        };
+        bgImg.src = a.cover_image;
+      }, 100);
     });
   })();
 </script>
