@@ -1,13 +1,13 @@
 ---
 layout: plain
 ---
-{% if site.data.collection %}
+{%- if site.data.collection -%}
 <style type="text/css">
-    {% for release in site.data.collection %}
-    {% if release.cover_image %}
-    .discogs-release-{{ release.id }}:before {
-         background-image: url('{{ release.cover_image }}');
-     }
+    {%- for release in site.data.collection -%}
+    {%- if release.cover_image -%}
+    #discogs-release-{{ release.id }} > a:before {
+        background-image: url('{{ release.cover_image }}');
+    }
     {% endif %}
     {% endfor %}
 </style>
@@ -28,8 +28,8 @@ layout: plain
   <div id="catalog">
       <ul>
           {% for release in site.data.collection %}
-          <li data-discogs-id="{{ release.id }}">
-              <a class="cover-tile discogs-release-{{ release.id }}" target="_blank" href="https://www.discogs.com/release/{{ release.id }}">
+          <li data-discogs-id="{{ release.id }}" class="cover-tile fallback-background" id="discogs-release-{{ release.id }}">
+              <a target="_blank" href="https://www.discogs.com/release/{{ release.id }}">
                   <div>
                       <span>{{ release.artist}}</span>
                       <span class="dash">-</span>
@@ -40,4 +40,23 @@ layout: plain
       </ul>
   </div>
 </div>
+{%- endif -%}
+
+{%- if site.data.collection -%}
+<script type="text/javascript">
+  (function() {
+    var images = {{ site.data.collection | jsonify }};
+
+    images.forEach(function(a) {
+      var elm = document.getElementById('discogs-release-' + a.id);
+      elm.className = 'cover-tile loading';
+
+      var bgImg = new Image();
+      bgImg.onload = function(){
+        elm.className = 'cover-tile';
+      };
+      bgImg.src = a.cover_image;
+    });
+  })();
+</script>
 {%- endif -%}

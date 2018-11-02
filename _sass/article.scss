@@ -59,24 +59,62 @@ article.post .post-content {
   }
 }
 
-#catalog .cover-tile {
-  display: flex;
-  position:  absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 5%;
-  align-items: flex-end;
-  overflow: hidden;
-  margin: 2px;
-  background: gray;
 
-  .dash {
-    display: none;
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+}
+
+#catalog .cover-tile.loading:after, #catalog .cover-tile.loading a:after {
+  content: "";
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+  background-color: #888;
+  opacity: 0.6;
+  position: absolute;
+  top: 37.5%;
+  left: 37.5%;
+
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+#catalog .cover-tile.loading a:after {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+#catalog .cover-tile {
+    a {
+    display: flex;
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 5%;
+    align-items: flex-end;
+    overflow: hidden;
+    margin: 2px;
+    //background: #eeeeee;
+
+    .dash {
+      display: none;
+    }
   }
 
-  &:after {
+  &.loaded a:after, &.fallback-background a:after {
     content: "";
     position: absolute;
     left: 0;
@@ -89,11 +127,17 @@ article.post .post-content {
     transition-timing-function: ease-in-out;
   }
 
-  &:hover:after {
+  &.loaded a:hover:after, &.fallback-background a:hover:after {
     opacity: 1;
   }
 
-  &:before {
+  a {
+    &:hover, &:active, &:visited {
+      text-decoration: none;
+    }
+  }
+
+  a:before {
     content: "";
     position: absolute;
     left: 0;
@@ -116,13 +160,17 @@ article.post .post-content {
     transition-timing-function: cubic-bezier(0.050, 0.930, 0.290, 0.870); /* custom */
   }
 
-  &:hover:before {
-    filter: blur(5px);
-    transform: scale(1.5);
+  &.loading a:before {
+    opacity: 0;
   }
 
-  &:hover, &:active, &:visited {
-    text-decoration: none;
+  &.loaded a:before {
+    opacity: 1;
+  }
+
+  &:hover a:before {
+    filter: blur(5px);
+    transform: scale(1.5);
   }
 
   div {
