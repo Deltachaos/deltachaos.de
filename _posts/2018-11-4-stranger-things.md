@@ -8,7 +8,7 @@ spotify: user:1139745171:playlist:4g0iNAwQVIgYkMLxWNp74K
 intro: "Es gibt Welten die sind unbeholfen schön und schaurig zugleich. So wie „Stranger Things“ das ganz besonderns durch die sehr liebevoll arrangiert Musik von Kyle Dixon und Michael Stein zu dem wird was ist ist. Eine Hommage an die Kindheit und die 80er."
 ---
 
-Es gibt wenige Serien bei den ich sehr gespannt auf eine nächste Staffel warte, doch „Stranger Things“ is eine dieser
+Es gibt wenige Serien bei den ich sehr gespannt auf eine nächste Staffel warte, doch „Stranger Things“ ist eine dieser
 Serien. Der Plot ist eigentlich etwas weit hergeholt, beinhaltet er doch Referenzen auf die Verschwörungstheorie des
 Montauk-Projekt. Doch den Beobachter der Geschehnisse stört das eigentlich nicht, ist es doch ein Gedankenexperiment auf
 welches wir uns hier einlassen.
