@@ -70,17 +70,18 @@ class FetchDiscogsCollectionCommand extends Command
             $artistName = rtrim($artistName, ', ');
             $hash = md5($artistName . $item['basic_information']['title'] . $item['basic_information']['year']);
 
-            $clean[$hash] = [
+            $clean[$item['basic_information']['master_id']] = [
                 'artist' => $artistName,
                 'title' => $item['basic_information']['title'],
                 'year' => $item['basic_information']['year'],
                 'date_added' => $item['date_added'],
                 'cover_image' => $item['basic_information']['cover_image'],
+                'master_id' => $item['basic_information']['master_id'],
                 'id' => $item['id']
             ];
         }
 
-        return array_values($clean);
+        return $clean;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

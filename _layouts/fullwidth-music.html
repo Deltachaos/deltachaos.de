@@ -3,9 +3,10 @@ layout: plain
 ---
 {%- if site.data.collection -%}
 <style type="text/css">
-    {%- for release in site.data.collection -%}
+    {%- for item in site.data.collection -%}
+    {% assign release = item[1] %}
     {%- if release.cover_image -%}
-    #discogs-release-{{ release.id }} > a:before {
+    #discogs-release-{{ release.id }} > .tile-inner:before {
         background-image: url('{{ release.cover_image }}');
     }
     {% endif %}
@@ -18,8 +19,7 @@ layout: plain
 {%- if page.title -%}
 <h1 class="page-heading">{{ page.title }}</h1>
 {%- endif -%}
-
-{{ content }}
+    {{ content }}
 </div>
 </div>
 
@@ -27,15 +27,25 @@ layout: plain
 <div class="wrapper full-width-record">
   <div id="catalog">
       <ul>
-          {% for release in site.data.collection %}
-          <li data-discogs-id="{{ release.id }}" class="cover-tile fallback-background" id="discogs-release-{{ release.id }}">
-              <a target="_blank" href="https://www.discogs.com/release/{{ release.id }}">
-                  <div>
+          {% for item in site.data.collection %}
+          {% assign release = item[1] %}
+          <li data-discogs-id="{{ release.id }}" data-discogs-master-id="{{ release.master_id }}" class="cover-tile fallback-background" id="discogs-release-{{ release.id }}">
+              <a class="tile-inner{% if release.page != "" and release.page != nil %} review{% endif %}"
+                 {%- if release.page != "" and release.page != nil -%}
+                 href="{{ release.page }}"
+                 {%- else -%}
+                 target="_blank"
+                 href="https://www.discogs.com/release/{{ release.id }}"
+                 {%- endif -%}
+              >
+                  {%- if release.page != "" and release.page != nil -%}<div class="badge"><span>★</span></div>{%- endif -%}
+                  <div class="title">
                       <span>{{ release.artist}}</span>
                       <span class="dash">-</span>
                       <span>{{ release.title }}</span>
                   </div>
-              </a></li>
+              </a>
+          </li>
           {% endfor %}
       </ul>
   </div>
@@ -46,6 +56,7 @@ layout: plain
 <script type="text/javascript">
   (function() {
     var images = {{ site.data.collection | jsonify }};
+    images = Object.keys(images).map(function (key) { return images[key]; });
 
     images.forEach(function(a) {
       var elm = document.getElementById('discogs-release-' + a.id);

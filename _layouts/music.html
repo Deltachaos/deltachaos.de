@@ -1,0 +1,22 @@
+---
+layout: post
+---
+
+{% if page.intro != "" and page.intro != nil %}
+<div class="post-intro">
+{{ page.intro }}
+</div>
+{% endif %}
+
+<div class="music-hero">
+{% assign discogs_id = page.discogs |split:"," |first |plus: 0 %}
+{% assign current_discogs = site.data.collection[discogs_id] %}
+{% if current_discogs != "" and current_discogs != nil %}
+    <div class="music-image" style="background-image: url('{{ current_discogs.cover_image }}')"><img src="{{ current_discogs.cover_image }}" alt="Cover des Albums {{ current_discogs.title }} von {{ current_discogs.artist }}" /></div>
+{% endif %}
+{% if page.spotify != blank %}
+<div class="embed-container"><iframe src="https://open.spotify.com/embed/{{ page.spotify | replace: ':', '/' }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></div>
+{% endif %}
+</div>
+
+{{ content }}
