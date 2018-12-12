@@ -3,7 +3,7 @@ layout: post
 title:  "Wie Geld zur Zivilcourage wird"
 date:   2018-12-12 16:00:00 +0100
 categories: politik
-draft: true
+draft: false
 ---
 
 Wir kaufen Bio Produkte, beziehen Ökostrom und boykottieren Unternehmen welche politische Ziele verfolgen,
