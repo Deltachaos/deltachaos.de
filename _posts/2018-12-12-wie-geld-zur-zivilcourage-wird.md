@@ -8,7 +8,7 @@ draft: false
 
 Wir kaufen Bio Produkte, beziehen Ökostrom und boykottieren Unternehmen welche politische Ziele verfolgen,
 die unseren eigenen Idealen widersprechen. Dafür nehmen wir auch in Kauf einen eventuell höheren Preis zu
-bezahlen. Wir hoffen so der Realisierung dieser Ziele zu verhindern.
+bezahlen. Wir hoffen so die Welt in unserem Willen zu beeinflussen.
 
 Wir regen uns auf über Cum-Ex, über das spekulative Investmentbanking welches immer neue Blasen erzeugt, 
 ber Banken, welche Steuerflüchtige beraten. Aber gleichzeitig wollen wir überall kostenfrei Geld abheben,
