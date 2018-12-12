@@ -6,12 +6,12 @@ categories: politik
 draft: false
 ---
 
-Wir kaufen Bio Produkte, beziehen Ökostrom und boykottieren Unternehmen welche politische Ziele verfolgen,
+Wir kaufen Bio Produkte, beziehen Ökostrom und boykottieren Unternehmen welche politische Ziele verfolgen
 die unseren eigenen Idealen widersprechen. Dafür nehmen wir auch in Kauf einen eventuell höheren Preis zu
 bezahlen. Wir hoffen so die Welt in unserem Willen zu beeinflussen.
 
-Wir regen uns auf über Cum-Ex, über das spekulative Investmentbanking welches immer neue Blasen erzeugt, 
-ber Banken, welche Steuerflüchtige beraten. Aber gleichzeitig wollen wir überall kostenfrei Geld abheben,
+Wir regen uns auf über Cum-Ex, über das spekulative Investmentbanking in immer neue Blasen, 
+über Banken welche Steuerflüchtige beraten. Aber gleichzeitig wollen wir überall kostenfrei Geld abheben,
 kostenlose Kreditkarten, kostenlose Girokonten. Dabei stellen wir uns nie die Frage, wer für diese
 kostenlosen Dienstleistungen bezahlt? Denn alle diese Leistungen verursachen Kosten.
 
