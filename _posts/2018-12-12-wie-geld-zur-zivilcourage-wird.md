@@ -84,4 +84,6 @@ Doch bringt z. B. das [zeichnen von Genossenschaftsanteilen](https://www.gls.de
 einen hohen Nutzen. Die Erhöhung des Eigenkapitals führt direkt zu höheren vergebbaren Krediten durch die Bank und für den
 Genossen zu einer jährlichen Dividende.
 
-Dafür, dass mein Geld so gutes bewirken kann, nehme ich gerne in Kauf für mein Girokonto etwas zu bezahlen.
+Dafür, dass mein Geld so gutes bewirken kann, nehme ich gerne in Kauf für mein Girokonto etwas zu bezahlen. Wen das
+neugierig auf die GLS Bank gemacht hat dem empfehle ich sich die erste Folge des GLS Podcast [„Wer ist die GLS Bank“](https://blog.gls.de/podcast/gls-bank-podcast-folge-1/)
+anzuhören. 
