@@ -14,8 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 default_locale: "de"
-title: δελταχαος
-author: Maximilian Ruta
+lang: "de_DE"
+title: Maximilian 'Deltachaos' Ruta
+title_head: δελταχαος
+author:
+  name: Maximilian Ruta
+  twitter: Deltachaos
 email: mr@deltachaos.de
 gnupg_title: '0xE2093512D5F67BBA'
 description: >-
@@ -25,6 +29,26 @@ description: >-
   aktuelle politische Geschehen, Nerdkarms, und Musik.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.deltachaos.de/" # the base hostname & protocol for your site, e.g. http://example.com
+
+twitter:
+  username: Deltachaos
+
+facebook:
+  publisher: https://www.facebook.com/maximilian.ruta
+
+social:
+  name: Ben Balter
+  links:
+    - https://www.facebook.com/maximilian.ruta
+    - https://twitter.com/Deltachaos
+    - https://github.com/Deltachaos
+    - https://stackexchange.com/users/895133%2Fmaximilian-ruta
+    - https://www.last.fm/de/user/deltachaosrec
+    - https://www.instagram.com/deltachaosrec/
+    - https://www.youtube.com/user/Deltachaosrec
+    - https://www.xing.com/profile/Maximilian_Ruta
+    - https://www.linkedin.com/in/maximilian-ruta-72b5b05a
+
 twitter_username: Deltachaos
 github_username:  Deltachaos
 facebook_username: maximilian.ruta
