@@ -7,10 +7,10 @@ draft: true
 ---
 
 Ich habe heute eine E-Mail gelesen von jemandem der den Beschluss der Kölner Grünen sich mit der
-Initiative #SaveTheInternet zu solidarisieren nicht nachvollziehen kann. Die Fronten der Befürworter und Gegener
-der geplanten EU Urheberrechtsreform sind verhärtet. Daher habe ich das als Anlass genommen der Person in einer Antwort
-anhand eines Beispiels darzulegen weshalb ich den Artikel 13 und 11 dieser Reform in seiner jetzigen Form für
-Unverhältnismäßig halte.
+Initiative [#SaveTheInternet](https://savetheinternet.info) zu solidarisieren nicht nachvollziehen kann. Die Fronten der
+Befürworter und Gegener der geplanten EU Urheberrechtsreform sind verhärtet. Daher habe ich das als Anlass genommen der
+Person in einer Antwort anhand eines Beispiels darzulegen weshalb ich den Artikel 13 und 11 dieser Reform in seiner
+jetzigen Form für Unverhältnismäßig halte.
 
 ## Globuli
 
