@@ -12,6 +12,7 @@ branches:
 
 before_install:
   - sudo apt-get install -y ruby
+  - sudo apt-get install ruby`ruby -e 'puts RUBY_VERSION[/\d+\.\d+/]'`-dev
   - sudo gem install bundler -v 1.17.3
 
 script:
