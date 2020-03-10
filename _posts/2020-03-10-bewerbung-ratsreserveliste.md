@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Warum ich im Rat für Grüne Politik streiten möchte"
+title:  "Warum ich im Rat für Grüne Politik streiten möchte?"
 date:   2020-03-10 18:00:00 +0100
 categories: gruene
 draft: true
