@@ -17,7 +17,7 @@ In diesen drei Jahren habe ich als aktives Mitglied einiges in der Partei angest
 mitgearbeitet. Viele kennen mich sicher als unermüdlichen Pendler\*innenwahlkämpfer, als Mitinitiator eines neuen Formats
 für unser Interessiert\*innentreffen sowie als Mitgründer des Arbeitskreis Digitales und der Projektgruppe Wohnen.
 
-**Mein Motto lautet Digitale Kompetenz mit sozialem Herz!**
+**Mein Motto lautet digitale Kompetenz mit sozialem Herz!**
 
 Das letzte Jahr war bei mir geprägt von der Entwicklung eines Konzepts für lebenswertes und bezahlbares Wohnen, welches
 wir im Arbeitskreis Soziales erarbeitet und dann im November auf der KMV einstimmig beschlossen haben.
