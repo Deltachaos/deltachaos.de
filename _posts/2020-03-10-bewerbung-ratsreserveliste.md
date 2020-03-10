@@ -2,12 +2,11 @@
 layout: post
 title:  "Warum ich im Rat für Grüne Politik streiten möchte?"
 date:   2020-03-10 18:00:00 +0100
-image:  /assets/images/2020/03/bewerbung.png
-categories: gruene
+image:  /assets/images/2020/03/2B74506B-4BC4-4C2B-B466-B2A0C545AB97.jpeg
 draft: true
 ---
 
-![Maximilian Ruta](/assets/images/2020/03/bewerbung.png)
+![Maximilian Ruta](/assets/images/2020/03/2B74506B-4BC4-4C2B-B466-B2A0C545AB97.jpeg)
 
 Am 14. März 2020 möchte ich mich um einen Listenplatz auf der Ratsreserveliste der Kölner Grünen bewerben. Ich bin seit
 etwa drei Jahren Mitglied dieser Partei, weil ich etwas bewegen wollte. Ich hätte damals nicht gedacht, dass ich für den
