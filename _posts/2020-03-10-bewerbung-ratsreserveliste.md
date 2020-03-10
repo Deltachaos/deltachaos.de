@@ -2,6 +2,7 @@
 layout: post
 title:  "Warum ich im Rat für Grüne Politik streiten möchte?"
 date:   2020-03-10 18:00:00 +0100
+image:  /assets/images/2020/03/bewerbung.png
 categories: gruene
 draft: true
 ---
