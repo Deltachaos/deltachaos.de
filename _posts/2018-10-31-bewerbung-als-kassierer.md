@@ -3,6 +3,7 @@ layout: post
 title:  "Bewerbung als Kassierer im Ortsverband Innenstadt/Deutz"
 date:   2018-10-31 15:00:17 +0100
 categories: gruene
+draft: true
 ---
 
 ![Maximilian Ruta in einem Liegestuhl](/assets/images/2018/10/bewerbung.jpg)
