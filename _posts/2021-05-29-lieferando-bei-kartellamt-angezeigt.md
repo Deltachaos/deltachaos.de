@@ -27,7 +27,7 @@ dem folgen.
 
 > **Just Eat Takeaway E.V nutzt Monopolstellung aus um Provisionen zu erhöhen**
 > 
-> Die Just Eat Takeaway E.V ist Betrieber der deutschen Lieferdienstvermittlungsplattformen lieferando.de, pizza.de,
+> Die Just Eat Takeaway E.V ist Betreiber der deutschen Lieferdienstvermittlungsplattformen lieferando.de, pizza.de,
 > foodora.de, lieferservice.de, sowie lieferheld.de.
 > 
 > Das Konzept der online Lieferdienstvermittlung ist nicht neu. Die Plattform pizza.de war einer der ersten am
