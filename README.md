@@ -1,7 +1,7 @@
 # [Deltachaos](https://www.deltachaos.de/)
 
 
-[![Build Status](https://img.shields.io/travis/Deltachaos/deltachaos.github.io/source.svg?label=Build)][travis]
+[![Build Status](https://app.travis-ci.com/Deltachaos/deltachaos.github.io.svg?branch=source)][travis]
 
 [travis]: https://travis-ci.org/Deltachaos/deltachaos.github.io
 

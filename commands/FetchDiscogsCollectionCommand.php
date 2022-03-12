@@ -70,12 +70,23 @@ class FetchDiscogsCollectionCommand extends Command
             $artistName = rtrim($artistName, ', ');
             $hash = md5($artistName . $item['basic_information']['title'] . $item['basic_information']['year']);
 
+            $url = $item['basic_information']['cover_image'];
+            $prefix  = __DIR__ . '/..';
+            $fileUrl = '/assets/data/discogs/' . $item['basic_information']['master_id'] . '.jpg';
+
+            try {
+                $download = new \GuzzleHttp\Client();
+                $download->get($url, ['save_to' => $prefix . $fileUrl]);
+                $url = $fileUrl;
+            } catch (\Exception $e) {
+            }
+
             $clean[$item['basic_information']['master_id']] = [
                 'artist' => $artistName,
                 'title' => $item['basic_information']['title'],
                 'year' => $item['basic_information']['year'],
                 'date_added' => $item['date_added'],
-                'cover_image' => $item['basic_information']['cover_image'],
+                'cover_image' => $url,
                 'master_id' => $item['basic_information']['master_id'],
                 'id' => $item['id']
             ];
