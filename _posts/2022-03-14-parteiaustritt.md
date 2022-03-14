@@ -2,7 +2,7 @@
 layout: post
 title:  "Warum ich nicht mehr Mitglied der Grünen sein kann"
 date:   2022-03-14 10:00:00 +0100
-categories: politik
+categories: gruene
 draft: true
 ---
 
