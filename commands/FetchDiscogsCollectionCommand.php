@@ -7,6 +7,8 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\HttpClient\HttpClient;
+use Symfony\Component\HttpClient\Retry\GenericRetryStrategy;
+use Symfony\Component\HttpClient\RetryableHttpClient;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -16,7 +18,9 @@ class FetchDiscogsCollectionCommand extends Command
 
     public function __construct()
     {
-        $this->client = HttpClient::create();
+        $this->client = new RetryableHttpClient(HttpClient::create(), new GenericRetryStrategy(
+            delayMs: 5000
+        ));
         parent::__construct();
     }
 
@@ -89,11 +93,11 @@ class FetchDiscogsCollectionCommand extends Command
             $prefix  = __DIR__ . '/..';
             $fileUrl = '/assets/data/discogs/' . $item['basic_information']['master_id'] . '.jpg';
 
-            echo "Found item: " . json_encode($item['basic_information']) . "\n";
-
             try {
-                //file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
-                //$url = $fileUrl;
+                echo "Download " . $url . "\n";
+                sleep(5);
+                file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
+                $url = $fileUrl;
             } catch (\Exception $e) {
                 echo "Failed to download " . $url . ": ".$e->getMessage()."\n";
             }
@@ -114,9 +118,9 @@ class FetchDiscogsCollectionCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output) : int
     {
-        $output->write('Fetch collection... ');
+        $output->writeln('Fetch collection... ');
         $collection = $this->fetchCollection();
-        $output->writeln(' [DONE]');
+        $output->writeln('Fetch collection... [DONE]');
 
         $output->writeln(sprintf('Found %d items.', count($collection)));
 
