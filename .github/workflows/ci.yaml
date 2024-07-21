@@ -3,6 +3,8 @@ name: Build Jekyll site
 on:
   push:
     branches: ["main"]
+  schedule:
+    - cron: "05 23 * * *"
 
 permissions:
   contents: read
