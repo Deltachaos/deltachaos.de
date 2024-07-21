@@ -30,7 +30,13 @@ class FetchDiscogsCollectionCommand extends Command
 
     protected function fetchCollection() : array
     {
-        $url = 'https://api.discogs.com/users/deltachaos/collection/folders/0/releases?token='.getenv('DISCOGS_TOKEN');
+        $token = $_SERVER['DISCOGS_TOKEN'];
+
+        if (empty($token)) {
+            throw new \Exception('Discogs token is not defined');
+        }
+
+        $url = 'https://api.discogs.com/users/deltachaos/collection/folders/0/releases?token='.$token;
         $result = [];
 
         do {
@@ -73,7 +79,6 @@ class FetchDiscogsCollectionCommand extends Command
             }
 
             $artistName = rtrim($artistName, ', ');
-            $hash = md5($artistName . $item['basic_information']['title'] . $item['basic_information']['year']);
 
             $url = $item['basic_information']['cover_image'];
             $prefix  = __DIR__ . '/..';
@@ -82,8 +87,8 @@ class FetchDiscogsCollectionCommand extends Command
             echo "Found item: " . json_encode($item['basic_information']) . "\n";
 
             try {
-                file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
-                $url = $fileUrl;
+                //file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
+                //$url = $fileUrl;
             } catch (\Exception $e) {
                 echo "Failed to download " . $url . ": ".$e->getMessage()."\n";
             }
