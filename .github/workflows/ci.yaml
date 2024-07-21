@@ -15,10 +15,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install PHP
-        run: apt-get update && apt-get install -y php-cli unzip composer
-      - name: Composer
-        run: composer install
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
       - name: Fetch discogs
         run: php bin/console.php fetch-discogs
       - name: Setup Pages
