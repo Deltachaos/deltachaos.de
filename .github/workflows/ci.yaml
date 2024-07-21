@@ -20,7 +20,7 @@ jobs:
       - name: Setup PHP with PECL extension
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '7.1'
+          php-version: '8.3'
           tools: composer
       - name: Composer
         run: composer install

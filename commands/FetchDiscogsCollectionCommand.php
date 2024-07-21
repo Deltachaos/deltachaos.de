@@ -6,30 +6,35 @@ use GuzzleHttp\Client;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Component\Yaml\Yaml;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class FetchDiscogsCollectionCommand extends Command
 {
+    private readonly HttpClientInterface $client;
+
+    public function __construct()
+    {
+        $this->client = HttpClient::create();
+        parent::__construct();
+    }
+
     /**
      * Configures the current command.
      */
-    protected function configure()
+    protected function configure() : void
     {
         $this->setName('fetch-discogs');
     }
 
-    protected function fetchCollection()
+    protected function fetchCollection() : array
     {
-        $client = new Client();
-
         $url = 'https://api.discogs.com/users/deltachaos/collection/folders/0/releases?token='.getenv('DISCOGS_TOKEN');
         $result = [];
 
         do {
-            $response = $client->get(
-                $url
-            );
-            $releases = \GuzzleHttp\json_decode($response->getBody()->getContents(), true);
+            $releases = $this->client->request('GET', $url)->toArray();
 
             if (isset($releases['releases'])) {
                 $result = array_merge(
@@ -75,10 +80,10 @@ class FetchDiscogsCollectionCommand extends Command
             $fileUrl = '/assets/data/discogs/' . $item['basic_information']['master_id'] . '.jpg';
 
             try {
-                $download = new \GuzzleHttp\Client();
-                $download->get($url, ['save_to' => $prefix . $fileUrl]);
+                file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
                 $url = $fileUrl;
             } catch (\Exception $e) {
+                echo "Failed to download " . $url . ": ".$e->getMessage()."\n";
             }
 
             $clean[$item['basic_information']['master_id']] = [
@@ -95,7 +100,7 @@ class FetchDiscogsCollectionCommand extends Command
         return $clean;
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output) : int
     {
         $output->write('Fetch collection... ');
         $collection = $this->fetchCollection();
@@ -109,5 +114,7 @@ class FetchDiscogsCollectionCommand extends Command
             Yaml::dump($collection, 3)
         );
         $output->writeln(' [DONE]');
+
+        return 0;
     }
 }

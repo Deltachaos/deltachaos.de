@@ -5,10 +5,10 @@
         }
     },
     "require": {
-        "guzzlehttp/guzzle": "~6.0",
-        "symfony/dotenv": "^4.1",
-        "symfony/console": "^4.1",
-        "symfony/yaml": "^4.1",
-        "j7mbo/twitter-api-php": "^1.0"
+        "php": ">=8.3",
+        "symfony/dotenv": "^7.1",
+        "symfony/console": "^7.1",
+        "symfony/yaml": "^7.1",
+        "symfony/http-client": "^7.1"
     }
 }
