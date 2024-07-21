@@ -26,7 +26,7 @@ jobs:
         run: composer install
       - name: Fetch discogs
         env:
-          APP_ENV: ${{ vars.APP_ENV }}
+          APP_ENV: prod
           DISCOGS_USER: ${{ vars.DISCOGS_USER }}
           DISCOGS_TOKEN: ${{ secrets.DISCOGS_TOKEN }}
         run: php bin/console.php fetch-discogs

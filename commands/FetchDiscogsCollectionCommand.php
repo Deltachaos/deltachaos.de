@@ -31,12 +31,17 @@ class FetchDiscogsCollectionCommand extends Command
     protected function fetchCollection() : array
     {
         $token = $_SERVER['DISCOGS_TOKEN'];
+        $user = $_SERVER['DISCOGS_USER'];
 
         if (empty($token)) {
             throw new \Exception('Discogs token is not defined');
         }
 
-        $url = 'https://api.discogs.com/users/deltachaos/collection/folders/0/releases?token='.$token;
+        if (empty($user)) {
+            throw new \Exception('Discogs user is not defined');
+        }
+
+        $url = 'https://api.discogs.com/users/'.$user.'/collection/folders/0/releases?token='.$token;
         $result = [];
 
         do {
