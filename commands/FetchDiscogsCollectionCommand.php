@@ -79,6 +79,8 @@ class FetchDiscogsCollectionCommand extends Command
             $prefix  = __DIR__ . '/..';
             $fileUrl = '/assets/data/discogs/' . $item['basic_information']['master_id'] . '.jpg';
 
+            echo "Found item: " . json_encode($item['basic_information']) . "\n";
+
             try {
                 file_put_contents($prefix . $fileUrl, $this->client->request('GET', $url)->getContent());
                 $url = $fileUrl;
