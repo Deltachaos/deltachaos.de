@@ -3,6 +3,7 @@ layout: post
 title:  "Meine Gedanken zu den Ergebnissen der Landtagswahl"
 date:   2024-09-01 18:00:00 +0100
 categories: politik
+draft: false
 ---
 
 ## Die Brandmauer gegen die AfD und ihre Schwächen
