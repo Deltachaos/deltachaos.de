@@ -37,7 +37,7 @@ facebook:
   publisher: https://www.facebook.com/maximilian.ruta
 
 social:
-  name: Ben Balter
+  name: Maximilian Ruta
   links:
     - https://www.facebook.com/maximilian.ruta
     - https://twitter.com/Deltachaos
@@ -48,6 +48,7 @@ social:
     - https://www.youtube.com/user/Deltachaosrec
     - https://www.xing.com/profile/Maximilian_Ruta
     - https://www.linkedin.com/in/maximilian-ruta-72b5b05a
+    - https://www.twitch.tv/deltamonk
 
 twitter_username: Deltachaos
 github_username:  Deltachaos
@@ -60,6 +61,8 @@ xing_username: Maximilian_Ruta
 stackexchange_username: 895133/maximilian-ruta
 stackexchange_displayname: maximilian-ruta
 youtube_username: deltachaosrec
+twitch_username: deltamonk
+discord_username: deltachaos
 
 # Build settings
 markdown: kramdown
